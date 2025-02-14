@@ -18,43 +18,53 @@
     <div id="root"></div>
     <!--Component are small building blocks.It is a javascript function that returns JSX-->
     <script type="text/babel">
-            function Header() {
-              return (
-                <header>
-                  <h1>Eve's Kitchen</h1>
-                </header>
-              );
-            }
-            
-              /* When creating a component use capital letter and create it as a function */
-            
-            function Main() {
-              return (
-                <section>
-                  <p>We make the best food</p>
-                </section>
-              );
-            }
+      function Header() {
+        console.log();
+        /* This displays an object that has nothing in it*/
+        return (
+          <header>
+            <h1>Eve's Kitchen</h1>
+          </header>
+        );
+      }
 
-             /* React render a single component. Wrapping them in div tag makes div the parent  */
-             
-            
+      /* When creating a component use capital letter and create it as a function */
 
-            ReactDOM.render(
-              <div>
-              <Header />
-              <Main />
-              </div>,
+      function Main() {
+        return (
+          <section>
+            <p>We make the best food</p>
+          </section>
+        );
+      }
 
-              /* React render a single component. Wrapping them in div tag makes div the parent  */
-     
-              document.getElementById("root")
-            );
+      function App() {
+        return (
+            <div>
+            <Header />
+            <Main />
+            </div>
+        )
+      }
 
-            /* Adding component properties*/
+      /* React render a single component. Wrapping them in div tag makes div the parent  */
+      /*ReactDOM.render(
+        <div>
+          <Header />
+          <Main />
+        </div>, */
 
 
-           
+        /* Another way to render */
+        ReactDOM.render(
+        <App />,
+         
+
+
+        document.getElementById("root")
+      );
+
+      /* Adding component properties*/
     </script>
   </body>
 </html>
