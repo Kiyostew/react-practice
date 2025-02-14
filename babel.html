@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <title>React Babel</title>
+    </head>
+
+    <body>
+        <!--JSX is not supported in browser use babel complier -->
+        <div id="root"></div>
+        <!--JSX is html like syntax for creating UL elements-->
+            <script type="text/babel">
+                   
+                   let sun = "sun";
+                   let stars = "stars";
+                   let clouds = "clouds";
+                   let name = "React";
+
+                    ReactDOM.render(
+                        <ul>
+                            {/* Using curly braces in JSX means it is a JSX expression*/}
+                            <li>{sun}</li>
+                            <li>{stars}</li>
+                            <li>{clouds}</li>
+                            <li>{name.toUpperCase()}</li> {/* Functions can be used inside the curly  braces*/}
+                            <li>{name.length}</li>
+                        </ul>,
+                        document.getElementById("root")
+                    );
+                    //JSX is not supported in browser use babel complier 
+            </script>
+    </body>
+</html>

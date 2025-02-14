@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <title>React</title>
+    </head>
 
+    <body>
+        <!--create react element-->
+        <div id="root"></div>
+            <h1> Getting started with React</h1> <!--This H1 is created with html, just an example to compare-->
+            <script type="text/javascript">
+                //to reactDom.render two things are needed, the element to be created and where to put it
+                ReactDOM.render(
+                    //react.CreateElement takes 3 arguments, the html tag, the property, and the display text
+                    React.createElement(
+                        "h1", 
+                        null, 
+                        "Getting started with React" 
+                    ),
+                    document.getElementById("root")
+                );
+
+                //create react element as a variable
+                let heading = React.createElement(
+                        "h1", 
+                        null, 
+                        "Getting started with React!!" 
+                    ); 
+                    ReactDOM.render(
+                        heading,
+                        document.getElementById("root")
+                    );
+
+                //Refactoring elements with JSX
+                let ul = React.createElement(
+                        "ul", 
+                        null, 
+                        React.createElement("li", null, "cat"),
+                        React.createElement("li", null, "dog"),
+                        React.createElement("li", null, "pig"),
+                    ); 
+                    ReactDOM.render(
+                        ul,
+                        document.getElementById("root")
+                    );
+
+                    //JSX is html like syntax for creating UL elements 
+                    React.DOM.render(
+                        <ul>
+                            <li>sun</li>
+                            <li>stars</li>
+                            <li>clouds</li>
+                        </ul>,
+                        document.getElementById("root")
+                    );
+
+                    //JSX is not supported in browser use babel complier 
+
+
+
+            </script>
+        </div>
+
+    </body>
+</html>
