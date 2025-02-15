@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React Component Property</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function Header(props) {
+         /* props display an empty object*/
+        return (
+          <header>
+            <h1> {props.name}'s Kitchen</h1>
+          </header>
+        );
+      }
+
+      function Main() {
+        return (
+          <section>
+            <p>We make the best food</p>
+          </section>
+        );
+      }
+
+      function App() {
+        return (
+     /*added value to the props object by assigning a value to name. Add value whever the component is being rendered*/
+        
+          <div>
+            <Header name="Kay"/>
+            <Main />
+          </div>
+        );
+      }
+
+      ReactDOM.render(
+        <App />,
+
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
